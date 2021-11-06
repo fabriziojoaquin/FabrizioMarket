@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'materialize-sass', '~> 1.0.0'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
