@@ -7,7 +7,9 @@ class ContentsController < ApplicationController
 
   
   def index
-    @contents = Content.all
+    @contents = Content.all.order("created_at DESC").paginate(page: params[:page], per_page: 4)
+     #per ordinare gli elementi dall'ultimo creato in poi
+                                                     #dopo all mettiamo un punto poi order e tra parentesi il codice scritto  
   end
 
   
