@@ -11,6 +11,13 @@
     </div>
   <% end %>
 
+
+   <div class="field">
+    <label class="grey-text">Carica il contenuto digitale che vuoi vendere(formati supportati: Powerpoint, Excel, Word. PDF, immagini e MP3)</label>
+
+    <%= form.file_field :allegato %>
+  </div>
+<br>
   <div class="field">
     <%= form.label :titolo %>
     <%= form.text_field :titolo %>
@@ -18,25 +25,24 @@
 
   <div class="field">
     <%= form.label :descrizione %>
-    <%= form.text_area :descrizione %>
+    <%= form.text_area :descrizione, class: "materialize-textarea" %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label :prezzo %>
     <%= form.text_field :price %>
   </div>
 
   <div class="field">
-    <%= form.label :cover %>
+    <label class="grey-text">Carica un'immagine da utilizzare come cover per il tuo contenuto</label>
+    <br>
     <%= form.file_field :cover %>
   </div>
 
-  <div class="field">
-    <%= form.label :allegato %>
-    <%= form.file_field :allegato %>
-  </div>
+ <br>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Salva Contenuto', class: "btn btn-form" %>
   </div>
+  <br>
 <% end %>
