@@ -35,6 +35,8 @@ gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-materialize'
 gem 'friendly_id', '~> 5.4.0'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'stripe'
+
 
 
 # Use Capistrano for deployment

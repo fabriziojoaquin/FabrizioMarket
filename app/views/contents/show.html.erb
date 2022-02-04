@@ -29,9 +29,25 @@
   <strong>Descrizione:</strong>
   <%= @content.descrizione %>
 </p>
-
-
-
+ 
+ <% if current_user %>
+  <%= form_tag compra_path(slug: @content.slug) do %>
+        <script
+          src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="<%= Rails.application.credentials[:stripe][:public]%>"
+          data-name="FabrizioMarket"
+          data-description="<%= @content.titolo %>"
+          data-email="<%= current_user.email %>"
+          data-amount="<%= @content.price %>"
+          data-currency="eur">
+        </script>
+  <% end %>
+   <% else %>
+      <p>Fai <%= link_to "Login", new_user_session_path %> oppure  
+      <%= link_to "Registrati", new_user_registration_path %>
+      per poter acquistare questo contenuto </p>       
+   <% end %>
 </div>
 
 </div>
