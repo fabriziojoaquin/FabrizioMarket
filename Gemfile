@@ -36,6 +36,7 @@ gem 'will_paginate-materialize'
 gem 'friendly_id', '~> 5.4.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'stripe'
+gem 'aasm'
 
 
 
